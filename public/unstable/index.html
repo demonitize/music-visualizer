@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="og:image"
+      content="https://cdn.glitch.com/d77bd568-06d5-457a-943d-4ba8493e52f8%2FvisualizerUnstable.png?v=1631125379413"
+    />
+    <meta
+      name="description"
+      content="Music Visualizer created by Demonitized. UNSTABLE BUILD"
+    />
+    <meta name="author" content="Demonitized" />
+
+    <meta
+      name="og:description"
+      content="Music Visualizer created by Demonitized. UNSTABLE BUILD"
+    />
+    <meta name="og:author" content="Demonitized" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Music Visualizer version 1.21.2 UNSTABLE</title>
+    <link rel="stylesheet" href="/unstable/style.css" />
+    <link rel="stylesheet" href="/unstable/buttonstyle.css" />
+    <link rel="stylesheet" href="/exports/polyfill/multirange.css" />
+    <style id="fileNameStylesheet">
+      :root {
+        --animate-speed: move 240s linear infinite;
+      }
+      #fileName {
+        animation: var(--animate-speed);
+      }
+    </style>
+    <script src="/exports/polyfill/multirange.js" defer></script>
+    <script src="/unstable/script.js" type="application/javascript"></script>
+    <script src="/unstable/player.js" type="application/javascript"></script>
+    <script src="/exports/main.js" type="application/javascript"></script>
+  </head>
+
+  <body onload="javascript:onWindowLoad()">
+    <noscript
+      >Well this is embarrassing... It seems like you don't have JavaScript
+      enabled, which means this webpage will not work.</noscript
+    >
+    <div id="content">
+      <label for="audioFile">Upload File</label>
+      <input
+        type="file"
+        id="audioFile"
+        accept="audio/*, video/*"
+        onchange="javascript:onFileChange()"
+      />
+      <audio id="audio" class="audioFile"></audio>
+    </div>
+    <div id="metadata">
+      <div id="duration">
+        <p
+          id="timeDisplay"
+          class="timeDisplay"
+          title="Congratulations! You found an easter egg! Now please prepare this pear, then prepare this second pear, so you will have prepared this pair of pears!"
+        >
+          00:00
+        </p>
+        <p id="totalTimeDisplay" class="timeDisplay">
+          00:00
+        </p>
+        >
+
+        <!--     TODO: Add progress bar     -->
+      </div>
+      <p id="fileName" class="fileName">No audio is playing currently</p>
+      <!-- Use this as the default text. -->
+    </div>
+    <div id="playbackCtrls">
+      <input
+        type="button"
+        class="controlBtn masterButton pausePlay"
+        value="Pause Playback"
+        onclick="javascript:audio.pause()"
+      />
+      <input
+        type="button"
+        class="controlBtn masterButton startPlay"
+        value="Start Playback"
+        onclick="javascript:audio.play()"
+      />
+      <input
+        type="button"
+        class="controlBtn masterButton toggleLoop"
+        value="Enable Looping"
+        onclick="javascript:toggleLooping()"
+        id="loopBtn"
+      />
+      <input
+        type="button"
+        class="controlBtn masterButton restartPlay"
+        value="Restart Playback"
+        onclick="javascript:audio.currentTime=0"
+      />
+      <input
+        type="button"
+        class="controlBtn masterButton forcePlayback"
+        value="Display Url Params Type"
+        onclick="javascript:alert(typeof getQueryVariable(`blue`))"
+      />
+      <!-- Add an EQ maybe? I'm thinking maybe a dropdown menu for control. -->
+      <!--       <input
+        type="button"
+        class="masterButton stupidBassBoost"
+        value="Stupid Bass Boost"
+        onclick="javascript:startStupidBassBoostShit()"
+      /> -->
+    </div>
+    <hr />
+    <canvas id="canvas"></canvas>
+    <div class="colorPicker" style="position:fixed;top:4em;right:100px;">
+      <img src="https://cdn.glitch.me/d77bd568-06d5-457a-943d-4ba8493e52f8%2Fcogwheel.svg" title="Visualizezr Options" alt="Visualizer Options" width="32" height="32">
+      <button class="dropbtn">Dropdown</button>
+      <div class="dropdown-content">
+        Base Visualizer Color<input type="color" id="clrPicker" class="colorPickerElm" />
+      </div>
+    </div>
+    <div class="glitchButton" style="position:fixed;top:4em;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>

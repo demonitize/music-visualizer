@@ -1,0 +1,17 @@
+{
+  "stable": {
+    "red": 0,
+    "green": 0,
+    "blue": 0
+  },
+  "beta": {
+    "red": 0,
+    "green": 0,
+    "blue": 0
+  },
+  "unstable": {
+    "red": 0,
+    "green": 0,
+    "blue": 0
+  }
+}

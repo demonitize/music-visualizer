@@ -1,0 +1,277 @@
+/* this file is loaded by index.html and styles the page */
+
+.time {
+  color: #FFFFFF;
+  margin: 2em 1em;
+  background-color: #23272A;
+  position: fixed;
+  font-family: BeonMedium; /* haha cool font go brrrrrrrrr */
+}
+
+p {
+  color: #2c2f33;
+}
+
+time {
+  color: #FFFFFF;
+  margin: 2em 1em;
+  background-color: #23272A;
+  position: fixed;
+  font-family: BeonMedium;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 2em 1em;
+  line-height: 1.5em;
+  background-color: #000000;
+  font-family: BeonMedium;
+}
+
+h1 {
+  font-style: italic;
+  color: #FFFFFF;
+  max-width: calc(100% - 5rem);
+  line-height: 1.1;
+  font-family: BeonMedium;
+}
+
+input.audioFile {
+  border: 1px solid silver;
+  display: block;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+#fileName {
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  position: fixed;
+  top: 10px;
+  left: 300px;
+  z-index: 100;
+  background-color: #000000;
+  color: #00ffff;
+  font-family: BeonMedium;
+  font-size: 25px;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  cursor: default;
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 240s linear infinite;
+
+}
+
+#audioFile:hover::before {
+    border-color: black;
+}
+
+#audioFile:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+#audioFile::before {
+content: 'Please select a file';
+  display: inline-block;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  background-color: #000000;
+  color: #00ffff;
+  font-family: BeonMedium;
+  font-size: 25px;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 240s linear infinite;
+  
+}
+@keyframes move {
+    to {
+      background-position: 4500vh;
+    }
+  }
+
+#canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+audio {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: calc(100% - 20px);
+  font-family: BeonMedium;
+  font-size: 25px;
+  color: #1bf0f7;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 70s linear infinite;
+  @keyframes move {
+    to {
+      background-position: 4500vh;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+}
+
+div {
+  color: #FFFFFF;
+}
+
+/* .audioFile {
+  background-color: #2C2F33;
+  color: #FFFFFF;
+} */
+/* 
+progress {
+  background-color: #b52707;
+  color: #b00b0b;
+} */
+
+@font-face {
+  font-family: BeonMedium;
+  src: url(https://raw.githubusercontent.com/demonitize/demonitize/main/BeonMedium-7Z34.ttf);
+}
+
+.glitchButton {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.timeDisplay {
+   display: inline-block;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  background-color: #000000;
+  color: #00ffff;
+  font-family: BeonMedium;
+  font-size: 25px;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 600s linear infinite;
+  cursor: default;
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.duration:hover .tooltiptext{
+  visibility: visible;
+}
+.duration .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}

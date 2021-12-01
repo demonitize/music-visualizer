@@ -1,0 +1,29 @@
+{
+  "name": "music-visualizer",
+  "version": "1.19.2",
+  "description": "A music visualizer using the AudioContext API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "dotenv": "^10.0.0",
+    "ffmpeg": "^0.0.4"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/music-visualizer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express",
+    "music",
+    "visualizer",
+    "audiocontext"
+  ]
+}
